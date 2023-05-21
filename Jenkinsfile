@@ -2,24 +2,14 @@ pipeline {
     agent any
 
     stages {
-        stage('Checkout') {
+        stage('Ejecutar JMeter') {
             steps {
-                // Clonar el repositorio de GitHub que contiene el proyecto JMeter
-                git 'https://github.com/daniel-garciaQACG/Jmeter.git'
+                bat 'C:\\Users\\dagam\\Desktop\\apache-jmeter-5.5\\bin\\jmeter -jjmeter.save.saveservice.output_format=xml -n -t Script.jmx -l C:\\Users\\dagam\\Desktop\\apache-jmeter-5.5\\bin\\report.jtl'
             }
         }
-
-        stage('Run JMeter') {
+        stage('Publicar resultados de rendimiento') {
             steps {
-                // Ejecutar el script JMeter
-                bat "\"${tool 'JMeter'}/bin/jmeter\" -n -t Script.jmx -l report.jtl"
-            }
-        }
-
-        stage('Publish Report') {
-            steps {
-                // Publicar el informe de JMeter en Jenkins
-                junit 'report.jtl'
+                perfReport sourceDataFiles: 'C:\\Users\\dagam\\Desktop\\apache-jmeter-5.5\\bin\\report.jtl'
             }
         }
     }

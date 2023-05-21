@@ -5,7 +5,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 // Clonar el repositorio de GitHub que contiene el proyecto JMeter
-                git 'https://github.com/tu-usuario/tu-repositorio.git'
+                git 'https://github.com/daniel-garciaQACG/Jmeter.git'
             }
         }
 

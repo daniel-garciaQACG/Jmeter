@@ -12,7 +12,7 @@ pipeline {
         stage('Run JMeter') {
             steps {
                 // Ejecutar el script JMeter
-                bat "\"${tool 'JMeter'}/bin/jmeter.bat\" -n -t Script.jmx -l report.jtl"
+                bat "\"${tool 'JMeter'}/bin/jmeter\" -n -t Script.jmx -l report.jtl"
             }
         }
 

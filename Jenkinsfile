@@ -12,5 +12,13 @@ pipeline {
                 perfReport sourceDataFiles: 'C:\\Users\\dagam\\Desktop\\apache-jmeter-5.5\\bin\\report.jtl'
             }
         }
+        
+         stage('Resultado HTML') {
+            steps {
+                bat 'del C:\\Users\\dagam\\Desktop\\apache-jmeter-5.5\\bin\\Resultado'
+                bat 'rmdir /s /q C:\\Users\\dagam\\Desktop\\apache-jmeter-5.5\\bin\\HTMLREPORT'
+                bat 'C:\\Users\\dagam\\Desktop\\apache-jmeter-5.5\\bin\\jmeter -n -t C:\Users\dagam\Desktop\apache-jmeter-5.5\bin\Script.jmx -l Resultado -e -o C:\Users\dagam\Desktop\apache-jmeter-5.5\bin\HTMLREPORT'
+            }
+        }
     }
 }

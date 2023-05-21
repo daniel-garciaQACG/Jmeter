@@ -15,8 +15,7 @@ pipeline {
         
          stage('Resultado HTML') {
             steps {
-                bat 'mkdir "C:/ProgramData/Jenkins/.jenkins/workspace/Pruebas Jmeter/HTMLREPORT"'
-                bat 'C:\\Users\\dagam\\Desktop\\apache-jmeter-5.5\\bin\\jmeter -n -t Script.jmx -l Resultado -e -o HTMLREPORT'
+                bat 'C:\\Users\\dagam\\Desktop\\apache-jmeter-5.5\\bin\\jmeter -n -t Script.jmx -l Resultado -e -o'
             }
         }
     }

@@ -15,9 +15,9 @@ pipeline {
         
          stage('Resultado HTML') {
             steps {
-                bat 'del C:\\Users\\dagam\\Desktop\\apache-jmeter-5.5\\bin\\Resultado'
-                bat 'rmdir /s /q C:\\Users\\dagam\\Desktop\\apache-jmeter-5.5\\bin\\HTMLREPORT'
-                bat 'C:\\Users\\dagam\\Desktop\\apache-jmeter-5.5\\bin\\jmeter -n -t Script.jmx -l C:\\Users\\dagam\\Desktop\\apache-jmeter-5.5\\bin\\Resultado -e -o HTMLREPORT'
+                bat 'del Resultado'
+                bat 'rmdir /s /q HTMLREPORT'
+                bat 'C:\\Users\\dagam\\Desktop\\apache-jmeter-5.5\\bin\\jmeter -n -t Script.jmx -l Resultado -e -o HTMLREPORT'
             }
         }
     }

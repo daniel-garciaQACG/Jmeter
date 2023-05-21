@@ -18,6 +18,6 @@ pipeline {
                 bat 'rmdir /s /q HTMLREPORT'
                 bat 'C:\\Users\\dagam\\Desktop\\apache-jmeter-5.5\\bin\\jmeter -n -t Script.jmx -l Resultado -e -o HTMLREPORT'
             }
-        }C:\ProgramData\Jenkins\.jenkins\workspace\Pruebas Jmeter\HTMLREPORT
+        }
     }
 }

@@ -1,0 +1,3 @@
+Angel Sanchez,Av. Americas #15,Leon,Guanajuato,1293,amex,018182193,Angel Sanchez
+Daniel Garcia,Adalberto Lara #23,Xalapa,Veracruz,1234,amex,1234567890,Daniel Morales
+Antonio Diaz,Av. Orizaba #20,Guadalajara,Jalisco,0392,visa,39191921,Antonio Diaz

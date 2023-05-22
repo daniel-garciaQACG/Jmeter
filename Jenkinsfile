@@ -4,12 +4,12 @@ pipeline {
     stages {
         stage('Ejecutar JMeter') {
             steps {
-                bat 'C:\\Users\\dagam\\Desktop\\apache-jmeter-5.5\\bin\\jmeter -jjmeter.save.saveservice.output_format=xml -n -t Script.jmx -l C:\\Users\\dagam\\Desktop\\apache-jmeter-5.5\\bin\\report.jtl'
+                bat 'C:\\Users\\dagam\\Desktop\\apache-jmeter-5.5\\bin\\jmeter -jjmeter.save.saveservice.output_format=xml -n -t Script.jmx -l C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\Pruebas-Jmeter\\report.jtl'
             }
         }
         stage('Publicar resultados de rendimiento') {
             steps {
-                perfReport sourceDataFiles: 'C:\\Users\\dagam\\Desktop\\apache-jmeter-5.5\\bin\\report.jtl'
+                perfReport sourceDataFiles: 'C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\Pruebas-Jmeter\\report.jtl'
             }
         }
         
